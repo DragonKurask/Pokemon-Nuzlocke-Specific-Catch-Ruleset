@@ -1,6 +1,7 @@
 This project aims to provide a fresh new way to experience the Pokemon Nuzlocke challenge by telling you ahead of time which Pokemon you're able to catch up front. This gives rarer Pokemon encounters a more equal chance of being on your team, and has the benefit of allowing the open world Pokemon games to be Nuzlocke-able at all without a convoluted ruleset (Not that you can't use one if you want I won't judge)!
 
 The rules are simple:
+
 THE TRADITIONAL RULES:
 1) All Pokemon must be nicknamed.
 2) Any Pokemon that faints is considered dead and must be released or kept in a box to never be used again.
