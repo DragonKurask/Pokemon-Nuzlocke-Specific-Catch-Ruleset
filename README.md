@@ -42,3 +42,4 @@ Enjoy your playthrough!
 - Eventually get a GUI for the user to make the program easier to use
 - Make this more modular, like asking the user how many Pokemon they want per route (Mainly for SV onwards) or asking if they want water areas included with the main route, or even include it all
 - Make the README here more readable with better formatting
+- Eventually get this program to work with randomized roms up through at least the DS generations. This is a VERY far into the future plan since it requires learning how those games work AND integrating it into code
