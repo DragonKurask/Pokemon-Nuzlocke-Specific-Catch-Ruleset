@@ -2,14 +2,14 @@ This project aims to provide a fresh new way to experience the Pokemon Nuzlocke 
 
 The rules are simple:
 
-THE TRADITIONAL RULES:
+**THE TRADITIONAL RULES:**
 1) All Pokemon must be nicknamed.
 2) Any Pokemon that faints is considered dead and must be released or kept in a box to never be used again.
 
-THE NEW RULES:
+**THE NEW RULES:**
 1) You can only catch one Pokemon per route, which will be generated for you. For example, if your Pokemon Red version generates Pidgey on Route 1, you can only catch the FIRST Pidgey you encounter. Just like a traditional Nuzlocke, if you kill that encounter, you can no longer catch on that route.
 
-OPTIONAL RULES:
+**OPTIONAL RULES:**
 1) The list also generates a random Starter choice and has a potential to be a Wildcard which lets you choose whichever you want. You do not have to use this if you want.
 2) If you get a duplicate rolled, whether by catching it earlier or evolving it from a Pokemon you already caught, you can either:
     - Catch the first non-duplicate Pokemon you encounter, traditional Nuzlocke style
@@ -21,15 +21,24 @@ OPTIONAL RULES:
 6) Unique encounters such as static Pokemon (Kecleon in Gen 3 or Sudowoodo in Gen 2) and trades can be gotten and do not count as a "catch" for that route.
 
 
-HOW TO USE THIS PROGRAM:
+**HOW TO USE THIS PROGRAM:**
+
 This program is written entirely in Python. As such you will need Python to run it. You can download Python from the homepage ( https://www.python.org/downloads/ ). This was written in Python 3.11.9 so I'd recommend at least version 3.12. If you run into problems with installation, Google it for now. I am not experienced with this yet but plan on updating my own Python version soon TM.
 
 Once you have Python installed you want to make sure you're running the py file with it and not opening it as a text document. Right click "List Generator - Pokemon Nuzlocke SCR.py" and open with "Python" and it should run.
 It'll ask you to input your game which is as simple as typing in "red" (without the quotes).
-This program includes the data for:
-Red Version, Blue Version, and Emerald Version
+
+This program currently includes the data for:
+
+Generations 1, 3, and 9
 
 More will be added later.
 
 If you have any questions feel free to message me or @ me on X/Twitter @DragonKurask or on Bluesky @dragonkurask.bsky.social
 Enjoy your playthrough!
+
+-Planned Improvements/Features (No Timeline, Don't Wait up on These)-
+- Migrate data to a database like SQL for better access/use
+- Eventually get a GUI for the user to make the program easier to use
+- Make this more modular, like asking the user how many Pokemon they want per route (Mainly for SV onwards) or asking if they want water areas included with the main route, or even include it all
+- Make the README here more readable with better formatting
