@@ -1,0 +1,8 @@
+Petalburg City: ("Marill (Surf)","Goldeen (Old/Good)","Magikarp (Old/Good)","Corphish (Good/Super)")
+Dewford Town: ("Tentacool (Surf/Old/Good)","Wingull (Surf)","Pelipper (Surf 5%)","Magikarp (Old/Good)","Wailmer (Good/Super)")
+Slateport City: ("Tentacool (Surf/Old/Good)","Wingull (Surf)","Pelipper (Surf 5%)","Magikarp (Old/Good)","Wailmer (Good/Super)")
+Lilycove City: ("Tentacool (Surf/Old/Good)","Wingull (Surf)","Pelipper (Surf 5%)","Magikarp (Old/Good)","Wailmer (Good/Super)","Staryu (Super)")
+Mossdeep City: ("Tentacool (Surf/Old/Good)","Wingull (Surf)","Pelipper (Surf 5%)","Magikarp (Old/Good)","Wailmer (Good/Super)","Sharpedo (Super)")
+Pacifidlog Town: ("Tentacool (Surf/Old/Good)","Wingull (Surf)","Pelipper (Surf 5%)","Magikarp (Old/Good)","Wailmer (Good/Super)","Sharpedo (Super)")
+Sootopolis City: ("Magikarp (Surf/Old/Good/Super)","Tentacool (Old)","Gyarados (Super)")
+Ever Grande City: ("Tentacool (Surf/Old/Good)","Wingull (Surf)","Pelipper (Surf 5%)","Magikarp (Old/Good)","Wailmer (Good/Super)","Corsola (Super)","Luvdisc (Super)")

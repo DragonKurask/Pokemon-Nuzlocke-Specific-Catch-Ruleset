@@ -1,0 +1,7 @@
+Cerulean City: ("Tentacool (Surf)", "Magikarp (Old/Good)", "Horsea (Good)", "Krabby (Good/Super)", "Gyarados (Super)", "Slowpoke (Super 1%)")
+Cinnabar Island: ("Tentacool (Surf)", "Magikarp (Old/Good)", "Horsea (Good)", "Krabby (Good/Super)", "Staryu (Super)", "Gyarados (Super)", "Slowbro (Super 4%)", "Slowpoke (Super 1%)")
+Celadon City: ("Slowpoke (Surf)", "Koffing (1% Surf)", "Magikarp (Old/Good/Super)", "Grimer (Super 1%)")
+Fuchsia City: ("Slowpoke (Surf)", "Magikarp (Old/Good)", "Poliwag (Good)", "Goldeen (Good/Super)", "Seaking (Super)", "Gyarados (Super)", "Slowpoke (Super 5%)")
+Pallet Town: ("Tentacool (Surf)", "Magikarp (Old/Good)", "Horsea (Good)", "Krabby (Good/Super)", "Staryu (Super)", "Gyarados (Super)", "Kingler (Super 4%)", "Slowpoke (Super 1%)")
+Vermillion City: ("Tentacool (Surf)", "Magikarp (Old/Good)", "Horsea (Good, Super 4%)", "Krabby (Good/Super)", "Staryu (Super)", "Gyarados (Super)", "Slowpoke (Super 1%)")
+Viridian City: ("Slowpoke (Surf, Super 5%)", "Magikarp (Old/Good)", "Poliwag (Good/Super)", "Goldeen (Good)", "Poliwhirl (Super)", "Gyarados (Super)")

@@ -1,3 +1,14 @@
+#Project Goals:
+#Have the user be able to enter what game they want a list for (ex Red, Emerald, Scarlet, etc)
+#Based on a case statement, the program should read from different documents throughout the folder structure
+#Then for "Route","Cities", and "Dungeons" it should iterate through those documents and generate a random Pokemon from each locations values
+#It should then output a txt file in the "Output" folder
+
+#Extra goals
+#Potentially make a way that the output file doesn't overwrite the old one when running the program again or
+#Have the user be able to specify what they want the file to be named each time
+
+
 import random
 import os
 import ast
@@ -7,39 +18,75 @@ import ast
 script_dir = os.path.dirname(os.path.abspath(__file__))
 
 #Folder path shortcutes for each game
-gen1_path = os.path.join(script_dir,'Games Folders','Generation 1 RBY')
-gen3_path = os.path.join(script_dir,'Games Folders','Generation 3 RSE')
+gen1_path = os.path.join(script_dir,'Games Folders','Generation 1')
+gen3_path = os.path.join(script_dir,'Games Folders','Generation 3')
+gen9_path = os.path.join(script_dir,'Games Folders','Generation 9')
 
 #Dictionary for games and their folder paths to prep for proper input from the input statement loop
-gameList = {
+gamePaths = {
     "red":os.path.join(gen1_path, "Red"),
     "blue": os.path.join(gen1_path, "Blue"),
-    "emerald": os.path.join(gen3_path, "Emerald")
+    "yellow": os.path.join(gen1_path, "Yellow"),
+    "ruby": os.path.join(gen3_path, "Ruby"),
+    "sapphire": os.path.join(gen3_path, "Sapphire"),
+    "emerald": os.path.join(gen3_path, "Emerald"),
+    "fr": os.path.join(gen3_path, "Fire Red"),
+    "lg": os.path.join(gen3_path, "Leaf Green"),
+    "scarlet": os.path.join(gen9_path, "Scarlet"),
+    "violet": os.path.join(gen9_path, "Violet")
 }
 
-#Loop to make sure input is for a valid version, while also making sure whitespace and capitalization is taken care of
+#Might change this list at some point so it can properly grab the name of the game instead of matching the input code
 print("Please enter the game you would like to play.")
+print("The games and their codes are as follows:\n")
+gamesList = [
+    ["Game Name", "Input Code\n"],
+    ["Red Version", "red"],
+    ["Blue Version", "blue"],
+    ["Yellow Version", "yellow"],
+    ["Ruby Version", "ruby"],
+    ["Sapphire Version", "sapphire"],
+    ["Emerald Version", "emerald"],
+    ["Fire Red Version", "fr"],
+    ["Leaf Green Version", "lg"],
+    ["Scarlet Version", "scarlet"],
+    ["Violet Version", "violet"]
+]
+
+#Makes a table out of gamesList with the input code for the input showing up next to it
+#input codes are helpful for remakes that have extra words on their names, like Fire Red being FR or Brilliant Diamond being BD
+for row in gamesList:
+    print(f"{row[0]:<20} {row[1]:<10}")
+print("")
+
+#Loop to make sure input is for a valid version, while also making sure whitespace and capitalization is taken care of
 gameChoice = ""
-while gameChoice not in gameList:
-    print("The current versions available are: Red, Blue and Emerald")
-    gameChoice = input("Please enter which version you would like to play: ").strip().lower()
+while gameChoice not in gamePaths:
+    # print("The current versions available are: Red, Blue, Yellow, and Emerald")
+    gameChoice = input("Please enter the code for the version you would like to play: ").strip().lower()
     print("")
-    if gameChoice not in gameList:
-        print("Please enter a valid version.")
+    if gameChoice not in gamePaths:
+        print("Please enter a valid version. Make sure you're looking at the 'Input Code' column above")
 
 #defining usePath so the file gets the proper text files for the input
-usePath = gameList[gameChoice]
+usePath = gamePaths[gameChoice]
 
-#Output path with funny formatting to make the output file match the game choice so a user can have multiple games at the same time
-output_path = os.path.join(script_dir,'Output',f'{gameChoice.capitalize()} Version Output.txt')
+#File Name Input, lets the user name their files
+fileName = input("Please name your file: ")
+
+#Output path takes the string from fileName and makes it the name of the file in the correct spot
+output_path = os.path.join(script_dir,'Output',f'{fileName}.txt')
 fo = open(output_path,'w')
 
+#Some files will need to be redone for formatting to make it look nicer
+# ("Pokemon Name (% chance floor, % chance floor/floor2)") putting commas inbetween the different percentages instead of more slashes
 startersFilePath = os.path.join(usePath,'starters.txt')
 routesFilePath = os.path.join(usePath,'routes.txt')
 citiesFilePath = os.path.join(usePath,'cities.txt')
 dungeonsFilePath = os.path.join(usePath,'dungeons.txt')
 
 #All the rules of the playthrough, complete with a function to write them all to the top of the output document
+#This potentially will be consolidated to an external document rather than being in the code itself but it's not guaranteed
 rulesText = [
     "Welcome to the Pokemon Nuzlocke - Specific Catch Ruleset!\n",
     "\n",
@@ -64,12 +111,21 @@ rulesText = [
     "6) Unique encounters such as static Pokemon (like Kecleon in Gen 3 or Sudowoodo in Gen 2) and trades can be gotten in addition to Pokemon already caught\n"
     "    in the location\n"
     "\n",
-    f"With all of this out of the way, here's your Pokemon list for {gameChoice.capitalize()} version!\n",
+    f"With all of this out of the way, here's your Pokemon list for this playthrough!\n",
     "\n"
 ]
 for line in rulesText:
     print(line)
     fo.write(line)
+
+if gameChoice == "scarlet" or gameChoice == "violet":
+    print("IMPORTANT INFO FOR SCARLET AND VIOLET")
+    print("The data the internet has for Scarlet and Violet is lacking in a lot of ways, so rather than try and put a specific percentage")
+    print("If you spend too long trying to find a Pokemon (subjective), then consider the area a Wildcard\n")
+    fo.write("IMPORTANT INFO FOR SCARLET AND VIOLET\n")
+    fo.write("The data the internet has for Scarlet and Violet is lacking in a lot of ways, so rather than try and put a specific percentage\n")
+    fo.write("If you spend too long trying to find a Pokemon (subjective), then consider the area a Wildcard\n")
+    fo.write("\n")
 
 #The headers have extra new lines and print statements to properly format it on the output on the document and in the terminal
 #That way its easier to read
@@ -161,3 +217,4 @@ fo.write("on Youtube at https://www.youtube.com/@dragonkurask\n")
 #input statement to keep the terminal window opening at the end so the user can look at it without having to look in their folder
 print("")
 end = input("Input anything and press Enter to close the window. Your file has been saved to the \"Output\" in this directory.\n")
+fo.close()

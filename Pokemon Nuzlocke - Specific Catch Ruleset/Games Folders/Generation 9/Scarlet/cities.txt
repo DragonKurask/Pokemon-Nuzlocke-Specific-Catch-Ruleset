@@ -1,0 +1,1 @@
+No Cities have catchable Pokemon in them: ("But the program doesn't run if there's no cities section currently, whoops!", "But the program doesn't run if there's no cities section currently, whoops!")

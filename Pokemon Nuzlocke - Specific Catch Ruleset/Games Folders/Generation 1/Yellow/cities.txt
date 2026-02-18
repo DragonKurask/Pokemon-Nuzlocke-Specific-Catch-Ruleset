@@ -1,0 +1,7 @@
+Celadon City: ("Magikarp (Old)", "Poliwag (Good)", "Goldeen (Good/Super)") 
+Cerulean City: ("Magikarp (Old)", "Poliwag (Good)", "Goldeen (Good/Super)", "Seaking (Super)")
+Cinnabar Island: ("Magikarp (Old)", "Poliwag (Good)", "Goldeen (Good)", "Staryu (Super)", "Tentacool (Super)")
+Fuchsia City: ("Magikarp (Old/Super)", "Poliwag (Good)", "Goldeen (Good)", "Gyarados (Super)")
+Pallet Town: ("Magikarp (Old)", "Poliwag (Good)", "Goldeen (Good)", "Staryu (Super)", "Tentacool (Super)")
+Vermillion City: ("Magikarp (Old)", "Poliwag (Good)", "Goldeen (Good)", "Tentacool (Super)", "Horsea (Super 10%)")
+Viridian City: ("Magikarp (Old)", "Poliwag (Good/Super)", "Goldeen (Good)")
