@@ -12,6 +12,7 @@
 import random
 import os
 import ast
+import re
 
 #gets the directory for the file no matter where the file is
 #Though the file won't do much if you mess with the folders that are needed with the rest of the file
@@ -72,7 +73,14 @@ while gameChoice not in gamePaths:
 usePath = gamePaths[gameChoice]
 
 #File Name Input, lets the user name their files
-fileName = input("Please name your file: ")
+while True:
+    fileNameInput = input("Please name your file (Max 35 characters, alphanumeric only): ")
+    fileName = re.sub(r'[^a-zA-Z0-9\s]', '', fileNameInput)
+    if len(fileName) <= 35 and len(fileName) > 0:
+        break
+    else:
+        print("That file name is invalid.")
+
 
 #Output path takes the string from fileName and makes it the name of the file in the correct spot
 output_path = os.path.join(script_dir,'Output',f'{fileName}.txt')
